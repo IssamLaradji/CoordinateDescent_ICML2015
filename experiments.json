@@ -1,0 +1,48 @@
+{ "1" : 
+  {"n_iters":500, 
+  "dataset_name":"exp1",
+  "objective":"least_squares",
+  "s_rules":["random", "cyclic", "lipschitz", "GS", "GSL"], 
+  "u_rules":["quadraticLip"],
+  "L2":0.001,
+  "L1":0,
+  "Title":"$l_2$-regularized sparse least squares",
+  "ylabel":"Loss",
+  "xlabel":"Iterations"},
+
+  "2" : 
+  {"n_iters":500, 
+  "dataset_name":"exp2",
+  "objective":"logistic",
+  "s_rules":["random", "cyclic", "lipschitz", "GS", "GSL"], 
+  "u_rules":["quadraticLip", "exact"],
+  "L2":0.001,
+  "L1":0,  
+  "Title":"$l_2$-regularized sparse logistic regression",
+  "ylabel":"Loss",
+  "xlabel":"Iterations"},
+
+  "3" :
+  {"n_iters":100, 
+  "dataset_name":"exp3",
+  "objective":"least_squares",
+  "s_rules":["random", "cyclic", "lipschitz", "GS","approxGS", "GSL", "approxGSL"], 
+  "u_rules":["quadraticLip"],
+  "L2":0.0,
+  "L1":0,
+  "Title":"Over-determined dense least squares",
+  "ylabel":"Loss",
+  "xlabel":"Iterations"},
+  
+  "4" :
+  {"n_iters":100, 
+  "dataset_name":"exp4",
+  "objective":"lasso",
+  "s_rules":["GSL-r","GS-r", "GS-s", "GS-q", "GSL-q"], 
+  "u_rules":["proximalL1"],
+  "L2":0.0,
+  "L1":0.001,
+  "Title":"$l_1$ - regularized underdetermined sparse least squares",
+  "ylabel":"Loss",
+  "xlabel":"Iterations"}
+}
